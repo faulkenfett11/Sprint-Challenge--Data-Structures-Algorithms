@@ -1,6 +1,11 @@
 const heapsort = (arr) => {
-  /* Your code here */
-  
+  const heap = new Heap();
+  const newArr = [];
+  arr.forEach(node => heap.insert(node));
+  while (heap.getSize() > 0) {
+    newArr.unshift(heap.delete())
+  }
+  return newArr;
 };
 
 
